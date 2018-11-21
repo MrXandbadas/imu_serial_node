@@ -1,4 +1,4 @@
-Peter Li: I modify a bit to make it work in Ubuntu 16.04 with ROS Kinetic. Better try not to run in high frequence. Better to run with a median filter!
+Peter Li: I modify a bit to make it work in Ubuntu 16.04 with ROS Kinetic. Better try not to run in high frequence. Better to run with a median filter!  Just 'git clone ' this project into your SRC file and 'catkin_make'.
 
 
 imu_serial_node
