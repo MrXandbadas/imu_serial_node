@@ -1,3 +1,6 @@
+I modify a bit to make it work in Ubuntu 16.04 with ROS Kinetic. 
+
+
 imu_serial_node
 =
 a simple ros serial node for imu, such as mpu 6050.
