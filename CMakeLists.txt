@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(imu_serial_node)
+project(imu_read)
 
+find_package(catkin REQUIRED)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -12,10 +13,22 @@ find_package(catkin REQUIRED COMPONENTS
   tf
 )
 
-
-include_directories(
-  ${catkin_INCLUDE_DIRS}
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES imu_read
+#  CATKIN_DEPENDS other_catkin_pkg
+#  DEPENDS system_lib
 )
 
-add_executable(imu_serial_node src/mpu6050_serial_to_imu_node.cpp)
-target_link_libraries(imu_serial_node   ${catkin_LIBRARIES} )
+include_directories(
+  include ${catkin_INCLUDE_DIRS}
+)
+
+
+add_executable(imu_read
+  src/imu_read.cpp
+)
+add_dependencies(imu_read ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(imu_read
+  ${catkin_LIBRARIES}
+)
