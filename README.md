@@ -1,4 +1,4 @@
-Peter Li: I modify a bit to make it work in Ubuntu 16.04 with ROS Kinetic. 
+Peter Li: I modify a bit to make it work in Ubuntu 16.04 with ROS Kinetic. Better try not to run in high frequence.
 
 
 imu_serial_node
