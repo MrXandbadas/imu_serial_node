@@ -1,5 +1,5 @@
 <launch>
-  <node pkg="imu_serial_node" type="imu_serial_node" name="mpu6050_node" required="true">
+  <node pkg="imu_read" type="imu_read" name="imu_read" required="true" output="screen">
     <param name="port" value="/dev/ttyUSB0"/>
     <param name="imu_frame_id" value="imu_base"/>
   </node>
